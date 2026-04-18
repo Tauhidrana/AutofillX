@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "AutofillX",
+  "description": "User-defined mappings to auto-fill Google Forms fields.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "AutofillX",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/forms/*"],
+      "js": ["utils.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

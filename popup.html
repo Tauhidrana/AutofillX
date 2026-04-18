@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutofillX</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0;
+        padding: 12px;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        width: 360px;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 10px;
+      }
+      .card {
+        border: 1px solid rgba(127, 127, 127, 0.25);
+        border-radius: 12px;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .grid {
+        display: grid;
+        gap: 10px;
+      }
+      label {
+        display: grid;
+        gap: 6px;
+        font-size: 12px;
+      }
+      input,
+      textarea {
+        padding: 8px 10px;
+        font-size: 13px;
+        border: 1px solid rgba(127, 127, 127, 0.4);
+        border-radius: 8px;
+        outline: none;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 60px;
+        line-height: 1.3;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: rgba(66, 133, 244, 0.9);
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      button {
+        cursor: pointer;
+        border: 0;
+        border-radius: 10px;
+        padding: 9px 12px;
+        font-size: 13px;
+        background: #1a73e8;
+        color: #fff;
+        flex: 1;
+      }
+      button.secondary {
+        background: rgba(127, 127, 127, 0.15);
+        color: inherit;
+        border: 1px solid rgba(127, 127, 127, 0.25);
+      }
+      button.danger {
+        background: #d93025;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      #status {
+        font-size: 12px;
+        min-height: 16px;
+        opacity: 0.9;
+      }
+      .muted {
+        opacity: 0.75;
+      }
+      .rulesHeader {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+      .rulesHeader h2 {
+        font-size: 13px;
+        margin: 0;
+      }
+      .ruleItem {
+        border: 1px solid rgba(127, 127, 127, 0.22);
+        border-radius: 12px;
+        padding: 10px;
+        display: grid;
+        gap: 8px;
+      }
+      .ruleMeta {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+      }
+      .pill {
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(127, 127, 127, 0.25);
+        opacity: 0.9;
+      }
+      .pill.ok {
+        border-color: rgba(15, 157, 88, 0.7);
+      }
+      .pill.warn {
+        border-color: rgba(244, 180, 0, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AutofillX</h1>
+
+    <div class="card grid">
+      <div class="rulesHeader">
+        <h2>New mapping rule</h2>
+        <span class="muted" style="font-size: 12px">partial match supported</span>
+      </div>
+
+      <form id="addRuleForm" class="grid" autocomplete="off">
+        <label>
+          Question identifier (keyword or full question)
+          <input id="newQuestion" type="text" placeholder='e.g. "তোমার নাম" or "vjudge username"' />
+        </label>
+
+        <label>
+          Value to fill
+          <input id="newValue" type="text" placeholder="e.g. Tauhid Rana" />
+        </label>
+
+        <div class="row">
+          <button id="addBtn" type="submit">Add rule</button>
+          <button id="testFillBtn" type="button" class="secondary">Test Fill</button>
+        </div>
+
+        <div id="status" class="muted" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="rulesHeader">
+        <h2>Saved rules</h2>
+        <span id="rulesCount" class="muted" style="font-size: 12px"></span>
+      </div>
+      <div id="rulesList" class="grid"></div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
