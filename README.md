@@ -1,10 +1,10 @@
-# 🚀 AutofillX
+#  AutofillX
 
 AutofillX is a powerful automation tool designed to eliminate repetitive form-filling tasks. It intelligently fills input fields using predefined or dynamic data, helping developers and users save time and reduce manual effort.
 
 ---
 
-## 🔥 Why AutofillX?
+##  Why AutofillX?
 
 Filling the same forms again and again is boring, slow, and error-prone.
 AutofillX solves this by automating the process with speed and precision.
@@ -13,17 +13,17 @@ AutofillX solves this by automating the process with speed and precision.
 
 ---
 
-## ✨ Core Features
+##  Core Features
 
-* ⚡ **Instant Autofill** — Fill forms in seconds
-* 🧠 **Smart Field Detection** — पहचान করে field type অনুযায়ী data বসায়
-* 🔁 **Reusable Data Profiles** — একবার data set করলে বারবার ব্যবহার
-* 🛡️ **Privacy Friendly** — Local data usage (no unnecessary sharing)
-* 🎯 **Flexible Usage** — Different form types support
+**Instant Autofill** — Fill forms in seconds
+*  **Smart Field Detection** — पहचान করে field type অনুযায়ী data বসায়
+**Reusable Data Profiles** — একবার data set করলে বারবার ব্যবহার
+ **Privacy Friendly** — Local data usage (no unnecessary sharing)
+ **Flexible Usage** — Different form types support
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 > ⚠️ Update this part properly (don’t skip like a beginner)
 
@@ -33,7 +33,7 @@ AutofillX solves this by automating the process with speed and precision.
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ```bash
 git clone https://github.com/Tauhidrana/AutofillX.git
@@ -51,7 +51,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ```bash
 # Example run command (modify this)
@@ -69,7 +69,7 @@ python main.py
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 AutofillX/
@@ -84,14 +84,14 @@ AutofillX/
 
 ## 🧪 Future Improvements
 
-* 🤖 AI-based smart suggestions
-* 🌐 Browser extension support
-* 📊 Usage analytics
-* 🔐 Encrypted data storage
+*  AI-based smart suggestions
+*  Browser extension support
+*  Usage analytics
+*  Encrypted data storage
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome!
 
@@ -105,13 +105,13 @@ Contributions are welcome!
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Kazi Tauhid Rana**
 
-* 💻 Competitive Programmer
-* 🚀 Aspiring Software Engineer
-* 🔥 Building real-world tools
+*  Competitive Programmer
+*  Aspiring Software Engineer
+*  Building real-world tools
 
 ---
 
